@@ -1,0 +1,2 @@
+rootProject.name = "VCs"
+include ':app'

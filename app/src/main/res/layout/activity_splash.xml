@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SplashActivity"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_leaf"
+            android:id="@+id/leaf"
+            android:layout_above="@+id/origin"
+            android:layout_marginBottom="60dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/origin"
+            android:layout_below="@id/vc" />
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/vc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V"
+                android:id="@+id/logo_v"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/cardo"
+                android:textSize="100dp"
+                android:textColor="@color/gold_dull" />
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:id="@+id/logo_c"
+                android:fontFamily="@font/cardo"
+                android:textSize="100dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/gold_dull" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/view_center"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="@font/moontime"
+            android:layout_below="@id/view_center"
+            android:layout_marginTop="60dp"
+            android:id="@+id/logo_subtext"
+            android:text="Style with precious\nsimplicity"
+            android:lineSpacingMultiplier="0.6"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/gold_dull"
+            android:textSize="40sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationViewTop"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/gold_border"
+            android:layout_alignParentTop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationViewBottom"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/gold_border"
+            android:layout_alignParentBottom="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            android:rotation="180" />
+    </RelativeLayout>
+</layout>

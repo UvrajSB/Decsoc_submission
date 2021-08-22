@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProductListFragment"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+    <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp">
+
+        <FrameLayout
+            android:id="@+id/cell_content_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/bangle_sample"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/gold_dull"
+                    android:text="raditional is best: If you are on the hunt for ravishing ladies bangles for wedding functions like the sangeet, wedding reception, pre-wedding cocktail party, and more, try picking akundan-studded bangles set. It would be prudent to pick a maang tikka, earrings, choker necklace and other accessories in a complementary design and wear each piece according to the occasion. Playing with your hair and makeup can also help mix it up and keep each look fresh and new."/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="buy now"
+                        android:layout_margin="20dp"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="add to cart"
+                        android:layout_margin="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cell_title_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/product_image1"
+                        android:src="@drawable/bangle_sample"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="The Maisha Twister Bangle"
+                            android:textSize="14sp"
+                            android:textColor="@color/gold_dull"
+                            android:layout_weight="1"
+                            android:id="@+id/product_name_tv1"
+android:layout_marginBottom="10dp"
+                            android:gravity="bottom|center_horizontal"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:cardBackgroundColor="@color/gold_dull"/>
+                        <TextView
+                            android:id="@+id/product_price_tv1"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Rs. 30000"
+                            android:textColor="@color/gold_dull"
+                            android:layout_weight="2"
+                            android:gravity="top|center_horizontal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </com.ramotion.foldingcell.FoldingCell>
+
+    ////////////////////////////////
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/spark_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:sparkbutton_activeImage="@drawable/fav_filled"
+                app:sparkbutton_inActiveImage="@drawable/fav_border"
+                app:sparkbutton_iconSize="40dp"
+                app:sparkbutton_primaryColor="@color/red"
+                app:sparkbutton_secondaryColor="@color/gold_dull"
+                android:layout_centerInParent="true"/>
+
+            <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="30dp">
+
+        <FrameLayout
+            android:id="@+id/cell_content_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/bangle_sample"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/gold_dull"
+                    android:text="raditional is best: If you are on the hunt for ravishing ladies bangles for wedding functions like the sangeet, wedding reception, pre-wedding cocktail party, and more, try picking akundan-studded bangles set. It would be prudent to pick a maang tikka, earrings, choker necklace and other accessories in a complementary design and wear each piece according to the occasion. Playing with your hair and makeup can also help mix it up and keep each look fresh and new."/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="buy now"
+                        android:layout_margin="20dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="add to cart"
+                        android:layout_margin="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cell_title_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/black"
+
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/product_image2"
+                        android:src="@drawable/bangle_sample"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="The Maisha Twister Bangle"
+                            android:textSize="14sp"
+                            android:textColor="@color/gold_dull"
+                            android:layout_weight="1"
+                            android:id="@+id/product_name_tv2"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="bottom|center_horizontal"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:cardBackgroundColor="@color/gold_dull"/>
+                        <TextView
+                            android:id="@+id/product_price_tv2"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Rs. 30000"
+                            android:textColor="@color/gold_dull"
+                            android:layout_weight="2"
+                            android:gravity="top|center_horizontal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </com.ramotion.foldingcell.FoldingCell>
+        </RelativeLayout>
+    /////////////////////////////////////
+    <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp">
+
+        <FrameLayout
+            android:id="@+id/cell_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/bangle_sample"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/gold_dull"
+                    android:text="raditional is best: If you are on the hunt for ravishing ladies bangles for wedding functions like the sangeet, wedding reception, pre-wedding cocktail party, and more, try picking akundan-studded bangles set. It would be prudent to pick a maang tikka, earrings, choker necklace and other accessories in a complementary design and wear each piece according to the occasion. Playing with your hair and makeup can also help mix it up and keep each look fresh and new."/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="buy now"
+                        android:layout_margin="20dp"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="add to cart"
+                        android:layout_margin="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/product_image"
+                        android:src="@drawable/bangle_sample"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="The Maisha Twister Bangle"
+                            android:textSize="14sp"
+                            android:textColor="@color/gold_dull"
+                            android:layout_weight="1"
+                            android:id="@+id/product_name_tv"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="bottom|center_horizontal"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:cardBackgroundColor="@color/gold_dull"/>
+                        <TextView
+                            android:id="@+id/product_price_tv"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Rs. 30000"
+                            android:textColor="@color/gold_dull"
+                            android:layout_weight="2"
+                            android:gravity="top|center_horizontal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </com.ramotion.foldingcell.FoldingCell>
+    </LinearLayout>
+</FrameLayout>

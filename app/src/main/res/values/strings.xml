@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VCs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_application_id">209148524500172</string>
+    <string name="fb_login_protocol_scheme">fb209148524500172</string>
+</resources>
