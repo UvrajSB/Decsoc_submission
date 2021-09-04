@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:rotation="90"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        app:cardBackgroundColor="@color/beige2"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        android:rotation="-90"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:cardElevation="1000dp"
+        android:alpha="0.2"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        android:rotation="-90"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:cardElevation="1000dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/cardo"
+                android:text="Demo product name"
+                android:lineSpacingMultiplier="0.7"
+                android:gravity="center|bottom"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/name_product_wl_item"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Rs."
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="right"/>
+            <TextView
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"
+                android:text="Demo price"
+                android:textSize="12sp"
+                android:fontFamily="@font/cardo"
+                android:gravity="left"
+                android:id="@+id/price_product_wl_item"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+
+        app:cardBackgroundColor="@android:color/transparent"
+        android:id="@+id/circle"
+        app:cardElevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/silver_border"
+            android:src="@drawable/silver_border"/>
+        <ImageView
+            android:rotation="-90"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/item_image_wl"
+           android:padding="42dp"
+            android:elevation="200dp"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

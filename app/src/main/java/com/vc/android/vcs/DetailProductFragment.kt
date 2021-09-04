@@ -97,14 +97,15 @@ class DetailProductFragment : Fragment() {
                 Firebase.firestore.collection("Existing users")
                     .document("${FirebaseAuth.getInstance().currentUser?.uid.toString()}").collection("cart")
                     .get()
-                    .addOnSuccessListener {codes->
+                    .addOnSuccessListener { codes ->
                         for (code in codes)
                             existingCodes.add(code.getString("number").toString())
                         if (!existingCodes.contains(productCode)) {
-                            val pcMap = mapOf("code" to productCode)
+                            val pcMap = hashMapOf("code" to productCode)
                             Firebase.firestore.collection("Existing users")
-                                .document("${FirebaseAuth.getInstance().currentUser?.uid.toString()}").collection("cart")
-                                .add(pcMap)
+                                .document("${FirebaseAuth.getInstance().currentUser?.uid.toString()}")
+                                .collection("cart")
+                                .document("${productCode}").set(pcMap)
                                 .addOnSuccessListener { documentReference ->
                                     //   Log.i("AUTH", documentReference.id)
                                     //  Log.i("AAUUTTHH", "here2")
@@ -114,9 +115,7 @@ class DetailProductFragment : Fragment() {
                                     //Log.i("AAUUTTHH", "here2 fail")
                                 }
                         }
-
                     }
-                firestoreProductRef.add(CartDC("${NewProduct.Code}"))
             } else {
                 showDialog()
             }
@@ -124,17 +123,18 @@ class DetailProductFragment : Fragment() {
         }
         binding.dpAddToCart1.setOnClickListener {
             if (FirebaseAuth.getInstance().currentUser != null) {
-                val pcMap = mapOf("code" to productCode)
                 Firebase.firestore.collection("Existing users")
                     .document("${FirebaseAuth.getInstance().currentUser?.uid.toString()}").collection("cart")
                     .get()
-                    .addOnSuccessListener {codes->
+                    .addOnSuccessListener { codes ->
                         for (code in codes)
                             existingCodes.add(code.getString("number").toString())
                         if (!existingCodes.contains(productCode)) {
+                            val pcMap = hashMapOf("code" to productCode)
                             Firebase.firestore.collection("Existing users")
-                                .document("${FirebaseAuth.getInstance().currentUser?.uid.toString()}").collection("cart")
-                                .add(pcMap)
+                                .document("${FirebaseAuth.getInstance().currentUser?.uid.toString()}")
+                                .collection("cart")
+                                .document("${productCode}").set(pcMap)
                                 .addOnSuccessListener { documentReference ->
                                     //   Log.i("AUTH", documentReference.id)
                                     //  Log.i("AAUUTTHH", "here2")
@@ -144,9 +144,7 @@ class DetailProductFragment : Fragment() {
                                     //Log.i("AAUUTTHH", "here2 fail")
                                 }
                         }
-
                     }
-                firestoreProductRef.add(CartDC("${NewProduct.Code}"))
             } else {
                 showDialog()
             }

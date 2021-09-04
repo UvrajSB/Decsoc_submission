@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/beige2"
+        android:foreground="@drawable/glass"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="110dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/product_image_item_cart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/diamond" />
+
+            <TextView
+                android:id="@+id/product_name_item_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/line"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/product_image_item_cart"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:lineSpacingMultiplier="0.9" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toRightOf="@+id/product_image_item_cart"
+                android:text="Rs."
+                android:textSize="20sp"
+                android:textStyle="italic"/>
+            <TextView
+                android:layout_marginLeft="35dp"
+                android:id="@+id/product_name_price_item_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_toRightOf="@+id/product_image_item_cart"
+                android:textSize="20sp"
+                android:textStyle="italic"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
