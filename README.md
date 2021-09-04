@@ -21,6 +21,8 @@ VCs is an online jewelery store.
 8) Material bottom navigation bar
 ### The app is still under work and had went through many other experimental views and things which are removed by now.
 I am trying my best to make it an real world application.
+## The business owner can update the data using the app
+**https://github.com/UvrajSB/vcs_updater_app**
 # Video
 
 https://user-images.githubusercontent.com/73571511/131559250-3e95d0ea-dc49-4e36-a7b9-c5ffdf26d379.mp4
