@@ -25,4 +25,5 @@ I am trying my best to make it an real world application.
 
 https://user-images.githubusercontent.com/73571511/131559250-3e95d0ea-dc49-4e36-a7b9-c5ffdf26d379.mp4
 
-
+## Uodated wishlist screen
+<img src="https://user-images.githubusercontent.com/73571511/132095419-a00b431c-2f81-4254-8436-68cdba0e5ae0.jpeg" width="150" height="300">
