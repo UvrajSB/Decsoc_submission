@@ -25,5 +25,7 @@ I am trying my best to make it an real world application.
 
 https://user-images.githubusercontent.com/73571511/131559250-3e95d0ea-dc49-4e36-a7b9-c5ffdf26d379.mp4
 
-## Uodated wishlist screen
-<img src="https://user-images.githubusercontent.com/73571511/132095419-a00b431c-2f81-4254-8436-68cdba0e5ae0.jpeg" width="150" height="300">
+## Updated wishlist screen
+<img src="https://user-images.githubusercontent.com/73571511/132095419-a00b431c-2f81-4254-8436-68cdba0e5ae0.jpeg" width="300" height="600">
+## Updated cart screen
+<img src="https://user-images.githubusercontent.com/73571511/132097272-5cdbaab4-3aad-478d-8ebc-9841043dfd0a.jpeg" width="300" height="600">
