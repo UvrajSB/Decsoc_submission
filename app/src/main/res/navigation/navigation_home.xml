@@ -12,7 +12,19 @@
         tools:layout="@layout/fragment_product_list" >
         <action
             android:id="@+id/action_productListFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_out"
+            app:exitAnim="@android:anim/fade_in"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_in"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <argument android:name="category_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productListFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -22,6 +34,16 @@
         <action
             android:id="@+id/action_homeFragment_to_productListFragment"
             app:destination="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.vc.android.vcs.DetailProductFragment"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" >
+        <action
+            android:id="@+id/action_detailProductFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+        <argument android:name="code" />
     </fragment>
 
 </navigation>

@@ -1,21 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
-    <com.varunest.sparkbutton.SparkButton
-        android:id="@+id/spark_button"
-        android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_height="match_parent"
-        app:sparkbutton_activeImage="@drawable/fav_filled"
-        app:sparkbutton_inActiveImage="@drawable/fav_border"
-        app:sparkbutton_iconSize="40dp"
-        app:sparkbutton_primaryColor="@color/red"
-        app:sparkbutton_secondaryColor="@color/gold_dull"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        android:layout_centerInParent="true"/>
-</RelativeLayout>
+    <data>
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/black_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ring"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="-150dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:elevation="500dp"
+            android:rotation="90"
+            android:id="@+id/wl_rv"/>
+
+
+    </RelativeLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".HomeFragment"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/black_bg"-->
+<!--                android:scaleType="centerCrop" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:src="@drawable/black_bg"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:scaleType="centerCrop" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:text="Wishlist"-->
+<!--                android:id="@+id/wishlistText"-->
+<!--                android:layout_marginTop="140dp"-->
+<!--                android:fontFamily="@font/mak"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:elevation="5000dp"-->
+<!--                android:textSize="30dp" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:src="@drawable/black_bg"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:scaleType="centerCrop" />-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginVertical="150dp"-->
+<!--                android:layout_marginHorizontal="10dp"-->
+<!--                app:cardCornerRadius="40dp"-->
+<!--                app:cardBackgroundColor="@color/beige">-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:id="@+id/wishlist_rv" />-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_height="220dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/ribbon"-->
+<!--                android:layout_marginTop="21dp"-->
+<!--                android:id="@+id/ribbon"-->
+<!--                android:elevation="900dp" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:src="@drawable/heart_wl"-->
+<!--                android:layout_marginLeft="200dp"-->
+<!--                android:layout_marginTop="85dp"-->
+<!--                android:elevation="2000dp"-->
+<!--                android:id="@+id/heart"/>-->
+<!--        </RelativeLayout>-->
+
+<!--    </LinearLayout>-->
+</layout>

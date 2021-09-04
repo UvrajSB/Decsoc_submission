@@ -1,6 +1,7 @@
 package com.vc.android.vcs
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -9,13 +10,28 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.firebase.firestore.EventListener
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
+import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController
+import com.smarteist.autoimageslider.SliderAnimations
+import com.smarteist.autoimageslider.SliderView
+import com.vc.android.vcs.DataClass.SliderItem
+import com.vc.android.vcs.NavFragments.HomeNavFragment
+import com.vc.android.vcs.adapter.SliderAdapterExample
+import com.vc.android.vcs.adapter.ViewPagerAdapter
 import com.vc.android.vcs.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+
+
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d("Main activity","main activity created")
@@ -28,52 +44,26 @@ class MainActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
             )
         }
-        binding.swipeBtn.setOnStateChangeListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.setData(Uri.parse("tel:07453820041"))
-            startActivity(intent)
-        }
-
-        var ct = findViewById<View>(R.id.collapsing_toolbar_layout) as CollapsingToolbarLayout
-        ct.title = "VC"
-        ct.setCollapsedTitleTextAppearance(R.style.VCtext)
-        ct.setExpandedTitleTextAppearance(R.style.VCtext)
-
-
-        val homeFragment = HomeNavFragment()
-        val profileFragment = ProfileFragment()
-        val wishlistFragment = WishlistFragment()
-        val cartFragment = CartFragment()
-        makeCurrentFragment(homeFragment)
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.home -> makeCurrentFragment(homeFragment)
-                R.id.wishlist -> makeCurrentFragment(wishlistFragment)
-                R.id.cart -> makeCurrentFragment(cartFragment)
-                R.id.profile -> makeCurrentFragment(profileFragment)
-            }
-            true
-        }
-
-
-
-        var badge1 = binding.bottomNavigation.getOrCreateBadge(R.id.cart)
-        var badge2 = binding.bottomNavigation.getOrCreateBadge(R.id.wishlist)
-        badge1.isVisible = true
-        badge2.isVisible = true
-// An icon only badge will be displayed unless a number is set:
-        badge1.number = 99
-        badge2.number = 10
+        setUpTabs()
 
     }
 
-    private fun makeCurrentFragment(fragment: Fragment) =
-        supportFragmentManager.beginTransaction().apply{
-            replace(R.id.fragmentSpace,fragment)
-            commit()
+        private fun setUpTabs() {
+            val adapter = ViewPagerAdapter(supportFragmentManager)
+            adapter.addFragment(HomeNavFragment(),"")
+            adapter.addFragment(WishlistFragment(), "")
+            adapter.addFragment(CartFragment(), "")
+            adapter.addFragment(ProfileCreatedFragment(), "")
+
+            binding.viewPager.adapter = adapter
+            binding.viewPager.offscreenPageLimit = 3
+            binding.tabs.setupWithViewPager(binding.viewPager)
+            binding.tabs.getTabAt(0)!!.setIcon(R.drawable.home)
+            binding.tabs.getTabAt(1)!!.setIcon(R.drawable.heart)
+            binding.tabs.getTabAt(2)!!.setIcon(R.drawable.cart)
+            binding.tabs.getTabAt(3)!!.setIcon(R.drawable.profile)
+
+
         }
-
-
-
 
 }

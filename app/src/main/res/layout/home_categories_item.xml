@@ -1,63 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="250dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginHorizontal="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/rings_and_nosepins_cv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="5dp"
-        android:layout_weight="1"
-        android:foreground="@drawable/golden_border_thin"
-        app:cardCornerRadius="20dp">
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/category_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/rings_and_nosepins" />
-<!--                <io.alterac.blurkit.BlurLayout-->
-<!--                    android:id="@+id/blurLayout74"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="60dp"-->
-<!--                    android:layout_centerInParent="true"-->
-<!--                    app:blk_blurRadius="25"-->
-<!--                    app:blk_downscaleFactor="0.001"-->
-<!--                    app:blk_fps="500" />-->
-            <androidx.cardview.widget.CardView
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/beige2"
+            android:foreground="@drawable/glass">
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:foreground="@drawable/silver_bg"
-                android:alpha="0.25"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="category name"
+                android:gravity="center"
+                android:fontFamily="mak"
+                android:textSize="16sp"
+                android:lineSpacingMultiplier="0.85"
+                android:textStyle="italic"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/category_name"/>
+        </androidx.cardview.widget.CardView>
 
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/category_image"
+        android:layout_width="200dp"
+        android:layout_marginBottom="50dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
         android:background="@android:color/transparent"
-        android:backgroundTint="@android:color/transparent">
+        android:src="@drawable/necklace1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Rings\nand\nNosepins"
-            android:textSize="15sp"
-            android:textColor="@color/gold_dull"
-            android:id="@+id/category_name"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

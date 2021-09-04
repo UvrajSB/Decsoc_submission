@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -77,4 +78,37 @@ dependencies {
     implementation 'com.github.varunest:sparkbutton:1.0.6'
     //swipe button
     implementation 'com.ebanx:swipe-button:0.4.0'
+    //shadow
+    implementation 'com.sdsmdg.harjot:materialshadows:1.2.5'
+    //animate images
+    implementation 'com.github.florent37:viewanimator:1.1.0'
+    //slider view
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+
+    // Java language implementation
+    implementation("androidx.navigation:navigation-fragment:2.3.5")
+    implementation("androidx.navigation:navigation-ui:2.3.5")
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.3.5")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:2.3.5")
+
+//multi dex
+     implementation 'androidx.multidex:multidex:2.0.1'
+    // wheel recycler view
+    implementation 'com.github.cdflynn:turn-layout-manager:v1.3.1'
+    //circular layout manager
+    implementation 'com.github.kapil93:circular-layout-manager:2.0.0'
+    //fan
+    compile 'com.cleveroad:fan-layout-manager:1.0.5'
 }
