@@ -19,7 +19,7 @@ VCs is an online jewelery store.
 7.4) Email</br>
 7.5) Phone number</br>
 8) Material bottom navigation bar
-### The app is still under work and had went through many other experimental views and things which are removed by noww
+### The app is still under work and had went through many other experimental views and things which are removed by now.
 I am trying my best to make it an real world application.
 # Video
 
